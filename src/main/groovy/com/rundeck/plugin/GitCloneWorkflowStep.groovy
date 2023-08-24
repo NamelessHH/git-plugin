@@ -67,9 +67,6 @@ class GitCloneWorkflowStep implements StepPlugin, Describable{
                                                                                      "false",null, renderingOptionsConfig))
                                                        .property(PropertyUtil.string(GIT_PASSWORD_STORAGE, "Git Password", 'Password to authenticate remotely', false,
                                                                                      null,null,null, renderingOptionsAuthenticationPassword))
-                                                       .property(PropertyUtil.select(GIT_HOSTKEY_CHECKING, "SSH: Strict Host Key Checking", '''Use strict host key checking.
-If `yes`, require remote host SSH key is defined in the `~/.ssh/known_hosts` file, otherwise do not verify.''', false,
-                                                                                     "yes",GitResourceModelFactory.LIST_HOSTKEY_CHECKING,null, renderingOptionsAuthentication))
     .property(PropertyUtil.string(GIT_KEY_STORAGE, "SSH Key Path", 'SSH Key Path', false,
                                                                                      null,null,null, renderingOptionsAuthenticationKey))
     .property(PropertyUtil.bool(GIT_PROJECT_BASED_SUBDIRECTORY, "Use per-project subdirectories", "Check repositories out in project-based subdirectories of the Rundeck home directory.",
